@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.github.darvld"
-version = "1.0-SNAPSHOT"
+version = "0.0.1"
 
 repositories {
     mavenLocal()
@@ -17,7 +17,7 @@ kotlin {
     mingwX64("native") {
         compilations.getByName("main").cinterops.create("libcurl")
         mavenPublication {
-            artifactId = "ux"
+            artifactId = "kurl"
         }
     }
 
