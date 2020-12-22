@@ -1,0 +1,26 @@
+package = libcurl
+headers = G:/msys64/mingw64/include/kurl/kurl.h
+
+# libraryPaths = G:/msys64/mingw64/lib/
+# staticLibraries = libcurl.a
+
+compilerOpts = -IG:/msys64/mingw64/include/kurl/
+linkerOpts = -lcurl -LG:/msys64/mingw64/lib
+
+---
+
+struct MemoryStruct {
+    char *memory;
+    size_t size;
+};
+
+CURLcode curl_post(CURL *kurl, char *formFields){
+    // curl_easy_setopt(kurl, CURLOPT_FOLLOWLOCATION, 1L);
+    // curl_easy_setopt(kurl, CURLOPT_MAXREDIRS, 3L);
+
+    curl_easy_setopt(kurl, CURLOPT_POST, 1L);
+
+    curl_easy_setopt(kurl, CURLOPT_POSTFIELDS, formFields);
+
+    return curl_easy_perform(kurl);
+}
