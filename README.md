@@ -17,4 +17,5 @@ to libcurl objects.
   - "Use" method to automatically dispose the handle after usage.
 
 ## Requirements
-To compile this library and projects depending on it, you must have libcurl installed in your system.
+To compile this library and projects depending on it, you must have libcurl installed in your system. Make sure to update the libcurl.def interop file to match your
+installation (absolute paths are necessary on Windows).
