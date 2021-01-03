@@ -19,6 +19,12 @@ kotlin {
         mavenPublication {
             artifactId = "kurl"
         }
+
+        /*binaries {
+            executable {
+                entryPoint = "main"
+            }
+        }*/
     }
 
     sourceSets {
